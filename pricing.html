@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | FIT FOR LIFE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid #333;
+            border-radius: 4px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-red);
+            box-shadow: 0 10px 30px rgba(230, 0, 0, 0.1);
+        }
+
+        .pricing-card.featured {
+            background-color: var(--bg-tertiary);
+            border-color: var(--accent-red);
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background-color: var(--accent-red);
+            color: white;
+            padding: 5px 40px;
+            font-size: 12px;
+            font-weight: 800;
+            transform: rotate(45deg);
+            text-transform: uppercase;
+        }
+
+        .plan-duration {
+            font-size: 24px;
+            color: var(--text-white);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .plan-price {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--accent-red);
+            margin-bottom: 20px;
+        }
+
+        .plan-price span {
+            font-size: 18px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .plan-features li {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan-features i {
+            color: var(--accent-red);
+        }
+
+        .special-offer-box {
+            background: rgba(230, 0, 0, 0.05);
+            border: 1px dashed var(--accent-red);
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        .special-offer-box p {
+            font-size: 13px;
+            margin: 0;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .special-offer-box strong {
+            color: var(--accent-red);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container logo-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Fit For Life Logo" style="height: 40px; margin-right: 10px;">
+                FIT FOR LIFE
+            </a>
+        </div>
+    </header>
+    <div class="main-nav">
+        <div class="container" style="position: relative;">
+            <button class="nav-scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="nav-scroll-container">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="facility.html">Facility</a>
+                    <a href="pricing.html" class="active">Pricing</a>
+                    <a href="reviews.html">Reviews</a>
+                    <a href="join-now.html" class="btn"
+                        style="padding: 10px 20px; font-size: 12px; margin-left: 15px;">Join Now</a>
+                </nav>
+            </div>
+            <button class="nav-scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <div style="height: 120px;"></div>
+
+    <!-- Pricing Section -->
+    <section class="section-padding bg-primary clip-bottom-right section-relative">
+        <div class="ghost-text">MEMBERSHIP</div>
+        <div class="container section-relative fade-in-section">
+            <div class="text-center">
+                <h2 class="section-title">CHOOSE YOUR <span class="text-red">PLAN</span></h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 18px;">
+                    Commit to your health and see the transformation. Select the membership duration that fits your
+                    goals.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- 3 Months -->
+                <div class="pricing-card fade-in-section delay-1">
+                    <h3 class="plan-duration">3 MONTHS</h3>
+                    <div class="plan-price">₹3,500</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Full Equipment Access</li>
+                        <li><i class="fas fa-check"></i> Strength & Cardio Zones</li>
+                        <li><i class="fas fa-check"></i> Locker Room Access</li>
+                        <li><i class="fas fa-times" style="color:#555"></i> Group Classes</li>
+                    </ul>
+                    <a href="join-now.html?plan=3months" class="btn btn-outline" style="width: 100%;">SELECT PLAN</a>
+                </div>
+
+                <!-- 6 Months (Featured) -->
+                <div class="pricing-card featured fade-in-section delay-2">
+                    <div class="popular-badge">RAMADAN</div>
+                    <h3 class="plan-duration">6 MONTHS</h3>
+                    <div class="plan-price">₹6,000</div>
+
+                    <div class="special-offer-box">
+                        <strong><i class="fas fa-moon"></i> RAMADAN SPECIAL</strong>
+                        <p>6 Months + 1 Month FREE. That’s 7 months of progress for the price of 6. Dedicate yourself to
+                            a healthier lifestyle. Join the community now.</p>
+                    </div>
+
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Full Equipment Access</li>
+                        <li><i class="fas fa-check"></i> Strength & Cardio Zones</li>
+                        <li><i class="fas fa-check"></i> Free Diet Consultation</li>
+                        <li><i class="fas fa-check"></i> Group Classes (Yoga/CrossFit)</li>
+                    </ul>
+                    <a href="join-now.html?plan=6months" class="btn" style="width: 100%;">SELECT PLAN</a>
+                </div>
+
+                <!-- 12 Months -->
+                <div class="pricing-card fade-in-section delay-3">
+                    <h3 class="plan-duration">12 MONTHS</h3>
+                    <div class="plan-price">₹10,000</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> All Facility Access</li>
+                        <li><i class="fas fa-check"></i> Unlimited Classes</li>
+                        <li><i class="fas fa-check"></i> Personalized Diet Plan</li>
+                        <li><i class="fas fa-check"></i> 2 PT Sessions / Month</li>
+                    </ul>
+                    <a href="join-now.html?plan=12months" class="btn btn-outline" style="width: 100%;">SELECT PLAN</a>
+                </div>
+            </div>
+
+            <!-- Holi Offer Banner below Pricing Cards -->
+            <div class="fade-in-section delay-1 text-center"
+                style="margin-top: 60px; padding: 40px; background: linear-gradient(135deg, var(--bg-secondary) 0%, #1a0505 100%); border-radius: 8px; border: 1px solid var(--accent-red);">
+                <h3 style="font-size: 28px; margin-bottom: 15px; color: #fff;">
+                    <i class="fas fa-paint-brush text-red"></i> HOLI FESTIVAL <span class="text-red">OFFER</span>
+                </h3>
+                <p
+                    style="font-size: 18px; color: var(--text-light); max-width: 800px; margin: 0 auto 20px; line-height: 1.6;">
+                    "This Holi, let your gains be as colorful as the festival! Happy Holi 2026! 🌈💪<br>
+                    Join with us at Fit For Life Gym.. Now get upto <strong class="text-red">15% off</strong> on Holi
+                    offer!"
+                </p>
+                <div style="font-size: 14px; color: var(--text-muted);">
+                    *Valid on our Personal Training and specialized Personal Diet plans. Contact us to claim!
+                </div>
+                <a href="join-now.html?plan=holi" class="btn" style="margin-top: 25px;">CLAIM HOLI OFFER</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 style="font-weight: 900;"><i class="fas fa-dumbbell text-red"></i> FIT FOR LIFE</h3>
+                    <p>Gym/Physical Fitness Center. Let's be fit 💪 start your fitness journey today🫰</p>
+                    <div class="social-icons" style="margin-top: 20px;">
+                        <a href="https://www.instagram.com/fitforlife.2025/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 style="color: var(--text-white); font-weight: 700;">NAVIGATION</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="facility.html">Facility</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 style="color: var(--text-white); font-weight: 700;">CONTACT</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt text-red"></i> 56, Beharilal Ghosh Rd, SP Paul Pally,
+                            Belghoria, Kolkata, West Bengal 700057</li>
+                        <li><i class="fas fa-clock text-red"></i> Mon-Fri, Sat, Wed, Thu, Tue: 6:00 AM - 10:30 PM <br>
+                            Sunday: 10:00 AM - 12:00 AM </li>
+                        <li><i class="fab fa-whatsapp text-red"></i> +91 98755 36824</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 FIT FOR LIFE. All Rights Reserved.</p>
+                <p>Designed with absolute discipline.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919875536824?text=Hi!%20I'm%20interested%20in%20joining%20FIT%20FOR%20LIFE%20%F0%9F%92%AA"
+        class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

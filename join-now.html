@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now | FIT FOR LIFE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container {
+            background: var(--bg-secondary);
+            padding: 50px;
+            border-radius: 4px;
+            border-top: 4px solid var(--accent-red);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-white);
+            text-transform: uppercase;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 2px solid #333;
+            color: white;
+            font-size: 16px;
+            border-radius: 2px;
+            transition: border-color 0.3s;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent-red);
+        }
+
+        /* Fix for select dropdown background in dark mode */
+        select option {
+            background-color: var(--bg-secondary);
+            color: var(--text-white);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container logo-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Fit For Life Logo" style="height: 40px; margin-right: 10px;">
+                FIT FOR LIFE
+            </a>
+        </div>
+    </header>
+    <div class="main-nav">
+        <div class="container" style="position: relative;">
+            <button class="nav-scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="nav-scroll-container">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="facility.html">Facility</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="reviews.html">Reviews</a>
+                    <a href="join-now.html" class="btn"
+                        style="padding: 10px 20px; font-size: 12px; margin-left: 15px;">Join Now</a>
+                </nav>
+            </div>
+            <button class="nav-scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div style="height: 120px;"></div>
+
+    <section class="section-padding bg-tertiary section-relative clip-bottom-right">
+        <div class="ghost-text">JOIN</div>
+        <div class="container section-relative fade-in-section">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2 class="section-title">START YOUR <span class="text-red">JOURNEY</span></h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 18px;">
+                    Send us your details and we will quickly connect with you via WhatsApp to finalize your membership!
+                </p>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="form-container">
+                    <form id="joinForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number (WhatsApp) *</label>
+                            <input type="tel" id="phone" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address (Optional)</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="plan">Select Plan *</label>
+                            <select id="plan" required>
+                                <option value="" disabled selected>Choose a Membership Tier</option>
+                                <option value="3 Months Plan">3 Months - ₹3,500</option>
+                                <option value="6 Months Plan (Ramadan Offer)">6 Months (7 Months RAMADAN Offer) - ₹6,000
+                                </option>
+                                <option value="12 Months Plan">12 Months - ₹10,000</option>
+                                <option value="Holi Offer Plan">Interested in Holi 15% Off Offer</option>
+                                <option value="Not Sure Yet">Still Deciding</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Message (Optional)</label>
+                            <textarea id="message" rows="4" placeholder="Any specific goals or questions?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%; font-size: 18px; padding: 18px;">JOIN VIA
+                            WHATSAPP</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 style="font-weight: 900;"><i class="fas fa-dumbbell text-red"></i> FIT FOR LIFE</h3>
+                    <p>Gym/Physical Fitness Center. Let's be fit 💪 start your fitness journey today🫰</p>
+                    <div class="social-icons" style="margin-top: 20px;">
+                        <a href="https://www.instagram.com/fitforlife.2025/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 style="color: var(--text-white); font-weight: 700;">NAVIGATION</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="facility.html">Facility</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 style="color: var(--text-white); font-weight: 700;">CONTACT</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt text-red"></i> 56, Beharilal Ghosh Rd, SP Paul Pally,
+                            Belghoria, Kolkata, West Bengal 700057</li>
+                        <li><i class="fas fa-clock text-red"></i> Mon-Fri, Sat, Wed, Thu, Tue: 6:00 AM - 10:30 PM <br>
+                            Sunday: 10:00 AM - 12:00 AM </li>
+                        <li><i class="fab fa-whatsapp text-red"></i> +91 98755 36824</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 FIT FOR LIFE. All Rights Reserved.</p>
+                <p>Designed with absolute discipline.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919875536824?text=Hi!%20I'm%20interested%20in%20joining%20FIT%20FOR%20LIFE%20%F0%9F%92%AA"
+        class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Pre-fill plan if passed in URL
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const planParam = urlParams.get('plan');
+            if (planParam) {
+                const planSelect = document.getElementById('plan');
+                if (planParam === '3months') planSelect.value = '3 Months Plan';
+                if (planParam === '6months') planSelect.value = '6 Months Plan (Ramadan Offer)';
+                if (planParam === '12months') planSelect.value = '12 Months Plan';
+                if (planParam === 'holi') planSelect.value = 'Holi Offer Plan';
+            }
+        });
+
+        // WhatsApp Form Submission Logic
+        document.getElementById('joinForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const plan = document.getElementById('plan').value;
+            const message = document.getElementById('message').value;
+
+            // Constructing WhatsApp message
+            let whatsappText = `*New Membership Inquiry - FIT FOR LIFE*\n\n`;
+            whatsappText += `*Name:* ${name}\n`;
+            whatsappText += `*Phone:* ${phone}\n`;
+            if (email) whatsappText += `*Email:* ${email}\n`;
+            whatsappText += `*Plan Selected:* ${plan}\n`;
+            if (message) whatsappText += `\n*Message:* ${message}\n`;
+
+            const encodedText = encodeURIComponent(whatsappText);
+            const whatsappNumber = "919875536824";
+
+            // Open WhatsApp
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
+        });
+    </script>
+</body>
+
+</html>
